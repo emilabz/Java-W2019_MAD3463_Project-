@@ -6,6 +6,7 @@ public class Orders {
     private String customerId;
     private String status;
     private String shippingId;
+    
 
     public placeOrder(){
 
