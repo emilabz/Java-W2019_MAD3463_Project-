@@ -1,22 +1,24 @@
+package com.onlineshop;
+
 public class ShoppingCart {
     private int cardId;
     private int productId;
     private int quantity;
     private int dateAdded;
 
-    public addCarItem()
+    public void addCarItem()
     {
 
     }
-    public  updateQuantity()
+    public void updateQuantity()
     {
 
     }
-    public viewCartDetails()
+    public void viewCartDetails()
     {
 
     }
-    public checkOut()
+    public void checkOut()
     {
 
     }

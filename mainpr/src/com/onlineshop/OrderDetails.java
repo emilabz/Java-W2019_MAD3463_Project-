@@ -1,3 +1,5 @@
+package com.onlineshop;
+
 public class OrderDetails {
     private int orderId;
     private int productId;
@@ -6,8 +8,8 @@ public class OrderDetails {
     private float unitCost;
     private float subtotal;
 
-    public calcPrice()
+    public void calcPrice()
     {
-
+        subtotal=unitCost*quantity;
     }
 }

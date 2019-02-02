@@ -1,3 +1,7 @@
+package com.onlineshop;
+
+import java.util.ArrayList;
+
 public class Orders {
     private int orderid;
     private String dateCreated;
@@ -6,10 +10,17 @@ public class Orders {
     private String customerId;
     private String status;
     private String shippingId;
+    //ArrayList<>
 
-    public placeOrder(){
+
+
+    public void placeOrder(){
 
     }
+
+
+
+
     public int getOrderid() {
         return orderid;
     }

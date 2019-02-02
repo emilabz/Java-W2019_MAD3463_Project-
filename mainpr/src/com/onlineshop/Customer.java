@@ -1,4 +1,5 @@
-import java.util.Scanner;
+package com.onlineshop;
+
 public class Customer extends User{
     String customerName;
     String address;
@@ -20,6 +21,8 @@ public class Customer extends User{
     }
     public void login(String usId,String pass)
     {
-        //
+        if((usId.equals(getUserid()))&&(pass.equals(getPassword()))){
+            System.out.println("com.onlineshop.Customer login successful");
+        }
     }
 }

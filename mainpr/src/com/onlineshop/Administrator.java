@@ -1,3 +1,5 @@
+package com.onlineshop;
+
 public class Administrator {
     String adminName;
     String email;

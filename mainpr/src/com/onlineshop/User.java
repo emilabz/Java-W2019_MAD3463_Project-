@@ -1,8 +1,14 @@
-import java.util.ArrayList;
+package com.onlineshop;
+
+import java.util.*;
 //import java.util.Arrays;
 
 public class User {
-    ArrayList<String> userid=new ArrayList<String>();
+    ArrayList<String>userid=new ArrayList<String>();
+    ArrayList<String>password=new ArrayList<String>();
+    String loginStatus;
+    //String userid;
+    //String password;
 
     public ArrayList<String> getUserid() {
         return userid;
@@ -20,10 +26,6 @@ public class User {
         this.password = password;
     }
 
-    ArrayList<String> password=new ArrayList<String>();
-    String loginStatus;
-    //String userid;
-    //String password;
     public boolean verifyLogin(String uid, String pass)
     {
         if(userid.contains(uid) && password.contains(pass))
