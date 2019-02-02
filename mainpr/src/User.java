@@ -5,7 +5,7 @@ public class User {
     ArrayList<String> userid=new ArrayList<String>();
 
     public ArrayList<String> getUserid() {
-        return userid;
+        return u                    serid;
     }
 
     public void setUserid(ArrayList<String> userid) {

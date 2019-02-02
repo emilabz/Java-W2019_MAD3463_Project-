@@ -1,4 +1,4 @@
-public class ShoppingCart {
+    public class ShoppingCart {
     private int cardId;
     private int productId;
     private int quantity;
