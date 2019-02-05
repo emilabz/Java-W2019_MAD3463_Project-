@@ -40,4 +40,12 @@ public class Products {
     public void setProductPrice(float productPrice) {
         this.productPrice = productPrice;
     }
+
+    public ArrayList<Products> getArrProd() {
+        return arrProd;
+    }
+
+    public void setArrProd(ArrayList<Products> arrProd) {
+        this.arrProd = arrProd;
+    }
 }

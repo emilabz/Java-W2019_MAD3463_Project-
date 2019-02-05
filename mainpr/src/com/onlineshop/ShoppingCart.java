@@ -7,6 +7,7 @@ public class ShoppingCart {
     private int quantity;
     private int dateAdded;
     ArrayList<ShoppingCart> arrCart= new ArrayList<ShoppingCart>();
+    Products pro=new Products();
     public ShoppingCart(int cartId,int productId,int quantity,int dateAdded){
         this.cartId=cartId;
         this.productId=productId;
@@ -29,17 +30,25 @@ public class ShoppingCart {
             return false;
         }
     }
-    public void updateQuantity(ShoppingCart sc)
+    public boolean updateQuantity(ShoppingCart sc)
     {
         for(ShoppingCart s:arrCart){
             if(sc.getCartId()==s.getCartId()){
-
+                s.setProductId(sc.getProductId());
+                s.setDateAdded(sc.getDateAdded());
+                s.setQuantity(sc.getQuantity());
+                return true;
             }
         }
+        return false;
 
     }
-    public void viewCartDetails()
+    public void viewCartDetails(ShoppingCart sc)
     {
+        for(Products p:pro.getArrProd()){
+            if(sc.getProductId()==p.getProductID())
+                System.out.println(sc.getCartId()+" "+sc.getProductId()+"   "+p.getProductName()+"  "+p.getProductPrice()+" "sc.getQuantity());
+        }
 
     }
     public void checkOut()

@@ -2,7 +2,7 @@ package com.onlineshop;
 
 import java.util.ArrayList;
 
-public class Orders {
+public class Orders implements  {
     private int orderid;
     private String dateCreated;
     private String dateShipped;

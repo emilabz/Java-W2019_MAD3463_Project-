@@ -9,6 +9,8 @@ public class Customer extends User {
     int flag = 1;
     Scanner sc = new Scanner(System.in);
     ArrayList<Customer> arrCust=new ArrayList<Customer>();
+    ArrayList<ShoppingCart> arrCart=new ArrayList<ShoppingCart>();
+    ArrayList<Orders> arrOrd=new ArrayList<Orders>();
 
     public void register(Customer c) {
         //,String addr,String em,String cardInf,String usId,String pass;
