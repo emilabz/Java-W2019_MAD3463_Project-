@@ -3,34 +3,45 @@ package com.onlineshop;
 import java.util.*;
 //import java.util.Arrays;
 
-public class User {
-    ArrayList<String>userid=new ArrayList<String>();
-    ArrayList<String>password=new ArrayList<String>();
+public abstract class User {
+    //ArrayList<String>userid=new ArrayList<String>();
+    //ArrayList<String>password=new ArrayList<String>();
+    String userid;
+    String password;
     String loginStatus;
-    //String userid;
-    //String password;
+    //ArrayList<User> arrUser=new ArrayList<User>();
 
-    public ArrayList<String> getUserid() {
+    /*public User(String uid,String pass,String logstat)  //setting login,pass n type
+    {
+        this.userid=uid;
+        this.password=pass;
+        this.loginStatus=logstat;
+        //arrUser.add(this);
+    }*/
+
+    abstract boolean verifyLogin(String uid, String pass); //to be used by other classes
+
+    public String getUserid() {
         return userid;
     }
 
-    public void setUserid(ArrayList<String> userid) {
+    public void setUserid(String userid) {
         this.userid = userid;
     }
 
-    public ArrayList<String> getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(ArrayList<String> password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
-    public boolean verifyLogin(String uid, String pass)
-    {
-        if(userid.contains(uid) && password.contains(pass))
-            return true;
-        else
-            return false;
+    public String getLoginStatus() {
+        return loginStatus;
+    }
+
+    public void setLoginStatus(String loginStatus) {
+        this.loginStatus = loginStatus;
     }
 }

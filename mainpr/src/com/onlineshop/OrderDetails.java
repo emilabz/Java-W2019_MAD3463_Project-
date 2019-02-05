@@ -1,4 +1,5 @@
 package com.onlineshop;
+import java.util.*;
 
 public class OrderDetails {
     private int orderId;
@@ -7,9 +8,9 @@ public class OrderDetails {
     private int quantity;
     private float unitCost;
     private float subtotal;
+    ArrayList<OrderDetails> arrOrddet=new ArrayList<OrderDetails>();
 
-    public void calcPrice()
-    {
+    public void calcPrice() {
         subtotal=unitCost*quantity;
     }
 }

@@ -10,14 +10,23 @@ public class Orders {
     private String customerId;
     private String status;
     private String shippingId;
-    //ArrayList<>
+    ArrayList<Orders> arrOrd= new ArrayList<>();
 
-
-
-    public void placeOrder(){
-
+    public boolean placeOrder(Orders ord){
+        if(arrOrd.isEmpty()){
+            arrOrd.add(ord);
+            return true;
+        }
+        else{
+            for(int i=0;i<arrOrd.size();i++){
+                if(arrOrd.get(i).getOrderid()!=ord.getOrderid()){
+                    arrOrd.add(ord);
+                    return true;
+                }
+            }
+        }
+        return false;
     }
-
 
 
 
