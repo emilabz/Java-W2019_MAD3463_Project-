@@ -2,7 +2,8 @@ package com.onlineshop;
 
 import java.util.*;
 
-public class ShippingInfo {
+public class ShippingInfo //implements iDisplay
+{
     private int shippingId;
     private String shippingType;
     private int shippingCost;

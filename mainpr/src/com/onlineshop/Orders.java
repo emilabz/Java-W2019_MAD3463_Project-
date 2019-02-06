@@ -2,7 +2,7 @@ package com.onlineshop;
 
 import java.util.ArrayList;
 
-public class Orders implements  {
+public class Orders {
     private int orderid;
     private String dateCreated;
     private String dateShipped;
@@ -10,8 +10,8 @@ public class Orders implements  {
     private String customerId;
     private String status;
     private String shippingId;
-    ArrayList<Orders> arrOrd= new ArrayList<>();
-
+    ArrayList<ShippingInfo> arrInfo=new ArrayList<ShippingInfo>();
+    ArrayList<OrderDetails> arrOrddet=new ArrayList<OrderDetails>();
     public boolean placeOrder(Orders ord){
         if(arrOrd.isEmpty()){
             arrOrd.add(ord);

@@ -6,33 +6,44 @@ public class ShoppingCart {
     private int productId;
     private int quantity;
     private int dateAdded;
-    ArrayList<ShoppingCart> arrCart= new ArrayList<ShoppingCart>();
-    Products pro=new Products();
-    public ShoppingCart(int cartId,int productId,int quantity,int dateAdded){
+    private String cusID;
+    Scanner sc=new Scanner(System.in);
+    //Customer c=new Customer();
+    //Products pro=new Products();
+    /*public ShoppingCart(int cartId,int productId,int quantity,int dateAdded){
         this.cartId=cartId;
         this.productId=productId;
         this.quantity=quantity;
         this.dateAdded=dateAdded;
-    }
+    }*/
 
-    public boolean addCarItem(ShoppingCart sc)
+    int ci=c.getArrCart().get(c.getArrCart().size()-1).getCartId();
+
+    public boolean addCarItem(int prID,int q,Customer c)
     {
-        if(arrCart.isEmpty()){
-            arrCart.add(sc);
+        if(c.getArrCart().isEmpty()){
+            this.cartId=1;
         }
         else{
-            for(ShoppingCart s:arrCart){
+            this.cartId=c.getArrCart().get(c.getArrCart().size()-1).getCartId()+1;
+           /* for(ShoppingCart s:arrCart){
                 if(s.getCartId()!=sc.getCartId()) {
                     arrCart.add(sc);
                     return true;
                 }
             }
-            return false;
+            return false;*/
         }
+        this.productId=prID;
+        this.quantity=q;
+        System.out.println("Enter date to be added\n");
+        this.dateAdded=sc.nextInt();
+        sc.nextLine();
     }
-    public boolean updateQuantity(ShoppingCart sc)
+    public boolean updateQuantity(int quantity)
     {
-        for(ShoppingCart s:arrCart){
+        this.quantity=new quantity;
+        /*for(ShoppingCart s:arrCart){
             if(sc.getCartId()==s.getCartId()){
                 s.setProductId(sc.getProductId());
                 s.setDateAdded(sc.getDateAdded());
@@ -40,20 +51,23 @@ public class ShoppingCart {
                 return true;
             }
         }
-        return false;
+        return false;*/
 
     }
-    public void viewCartDetails(ShoppingCart sc)
+    public void viewCartDetails(Customer c)
     {
-        for(Products p:pro.getArrProd()){
-            if(sc.getProductId()==p.getProductID())
-                System.out.println(sc.getCartId()+" "+sc.getProductId()+"   "+p.getProductName()+"  "+p.getProductPrice()+" "sc.getQuantity());
+        for(int i=0;i<c.getArrCart().size();i++){
+
         }
-
+        for(Products p:pro.getArrProd()) {
+            if (c.getArrCart().get(i).getProductId() == p.getProductID()) {
+                System.out.println(c.getArrCart().get(i).getCartId() + "   " + c.getArrCart().get(i).getProductId() + "   " + p.getProductName() + "  " + p.getProductPrice() + " "+c.getArrCart().get(i).getQuantity());
+            }
+        }
     }
-    public void checkOut()
+    public void checkOut(Customer c)
     {
-
+        c.arr
     }
 
     public int getCartId() {
@@ -87,4 +101,5 @@ public class ShoppingCart {
     public void setDateAdded(int dateAdded) {
         this.dateAdded = dateAdded;
     }
+*/
 }

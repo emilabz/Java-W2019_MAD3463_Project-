@@ -1,6 +1,7 @@
 package com.onlineshop;
 import java.util.*;
-public class Customer extends User {
+public class Customer //extends User
+{
     String customerName;
     String address;
     String email;
@@ -8,7 +9,6 @@ public class Customer extends User {
     String shippingInfo;
     int flag = 1;
     Scanner sc = new Scanner(System.in);
-    ArrayList<Customer> arrCust=new ArrayList<Customer>();
     ArrayList<ShoppingCart> arrCart=new ArrayList<ShoppingCart>();
     ArrayList<Orders> arrOrd=new ArrayList<Orders>();
 
@@ -65,10 +65,37 @@ public class Customer extends User {
                 if((cu.getUserid().contains(uid))&&(cu.getPassword().contains(pass))){
                     return true
                 }
-                else{
-                    return false;
-                }
             }
+            return false;
         }
+    }
+    public void updateProfile(){
+        System.out.println("Select option to change\n1.Shipping info\n2.E-mail\n3.CreditCard Info");
+        String ch=sc.nextLine();
+        switch (ch){
+            case "1":System.out.println("Enter new Shipping info");
+                     this.shippingInfo=sc.nextLine();
+                     System.out.println("Shipping info updated");
+                     break;
+
+            case "2":System.out.println("Enter new e-mail");
+                     this.email=sc.nextLine();
+                     System.out.println("E-mail updated");
+                     break;
+
+            case "3":System.out.println("Enter new CreditCard info");
+                     this.creditCardInfo=sc.nextLine();
+                     System.out.println("CreditCard info updated");
+                     break;
+            default:System.out.println("Enter valid choice");
+        }
+    }
+
+    public ArrayList<ShoppingCart> getArrCart() {
+        return arrCart;
+    }
+
+    public void setArrCart(ArrayList<ShoppingCart> arrCart) {
+        this.arrCart = arrCart;
     }
 }
